@@ -19,6 +19,124 @@ Para cumplir con las especificaciones de evaluación, este programa ha sido comp
 
 ---
 
+# Casos de prueba
+
+A continuación se muestran algunos conjuntos de datos de prueba recomendados para verificar el funcionamiento de los distintos métodos implementados en el programa. Estos valores tienen fines demostrativos y permiten validar que los algoritmos produzcan resultados correctos.
+
+## Opción 1: Sistemas de ecuaciones no lineales (Método de Broyden)
+
+### Sintaxis de las funciones
+
+Las ecuaciones deben escribirse utilizando la siguiente notación:
+
+* `x[0]` → primera variable.
+* `x[1]` → segunda variable.
+* `**` → operador de potencia en Python.
+
+Ejemplo para el sistema de prueba:
+
+```python
+x[0]**2 + x[1]**2 - 4
+x[0]*x[1] - 1
+```
+
+Este sistema corresponde a la intersección entre una circunferencia y una hipérbola.
+
+### Valores de prueba
+
+```text
+Número de ecuaciones: 2
+
+f1(x) = x[0]**2 + x[1]**2 - 4
+f2(x) = x[0]*x[1] - 1
+
+x[0] = 1.5
+x[1] = 0.5
+
+Dígitos de precisión: 5
+```
+
+---
+
+## Opción 2: Interpolación y ajuste de curvas
+
+### 2.1 y 2.2 Interpolación de Newton
+
+Para este método los datos deben ser equidistantes. Se recomienda utilizar puntos pertenecientes a la función:
+
+```text
+y = x²
+```
+
+con paso `h = 1`.
+
+#### Datos de prueba
+
+```text
+Número de puntos: 5
+
+x[0] = 1   y[0] = 1
+x[1] = 2   y[1] = 4
+x[2] = 3   y[2] = 9
+x[3] = 4   y[3] = 16
+x[4] = 5   y[4] = 25
+
+¿Son correctos los datos? (s/n): s
+```
+
+#### Interpolación
+
+```text
+Punto a interpolar: 2.5
+Grado: 2
+```
+
+---
+
+### 2.3 Ajuste por Spline Cúbico
+
+Para los splines cúbicos no es necesario que los puntos sean equidistantes.
+
+#### Datos de prueba
+
+```text
+¿Leer desde archivo CSV? (s/n): n
+
+Número de puntos: 4
+
+x[0] = 0     y[0] = 0
+x[1] = 1.5   y[1] = 2.5
+x[2] = 2     y[2] = 1
+x[3] = 3.2   y[3] = 4
+
+¿Son correctos los datos? (s/n): s
+```
+
+Al confirmar los datos, el programa calculará la matriz del sistema, los coeficientes del spline y mostrará la gráfica correspondiente.
+
+---
+
+## Opción 3: Integración numérica (Trapecio y Romberg)
+
+El programa incluye funciones predefinidas para realizar pruebas rápidas.
+
+### Datos de prueba
+
+```text
+Selecciona la opción 1 (Elegir la función)
+Elige (1 o 2): 1
+
+Selecciona la opción 2 (Leer intervalo)
+
+Límite inferior (a): 0
+Límite superior (b): 2
+
+Dígitos de precisión: 6
+```
+
+Posteriormente, selecciona la opción **Calcular integral**. El programa generará automáticamente la tabla de extrapolación de Romberg y mostrará el resultado final de la integración.
+
+
 ## 🛠️ Estructura y Módulos del Programa
 
 El sistema se opera a través de un menú interactivo en consola que da acceso a las siguientes herramientas matemáticas:
