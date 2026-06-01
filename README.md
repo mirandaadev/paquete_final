@@ -11,7 +11,7 @@ Para cumplir con las especificaciones de evaluación, este programa ha sido comp
 **No es necesario instalar Python, compiladores, ni librerías adicionales.**
 
 1. Ve a la sección de archivos de este repositorio.
-2. Descarga el archivo **`paquete_final.exe`**.
+2. Da click en **`paquete_final.exe`**, si no se descarga automaticamente, da click en **`view raw`**.
 3. Haz doble clic sobre el archivo en cualquier computadora con sistema operativo Windows.
 4. El menú interactivo se abrirá automáticamente en la consola del sistema.
 
