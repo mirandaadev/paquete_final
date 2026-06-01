@@ -1,5 +1,7 @@
 # 🧮 Paquete Final - Métodos Numéricos en Python
 
+-- ## El ejecutable puede tardar varias segundos en arrancar
+
 Este repositorio contiene la implementación final de algoritmos de análisis numérico desarrollados como proyecto académico. El programa integra soluciones robustas para la resolución de sistemas de ecuaciones no lineales, interpolación, ajuste de curvas e integración numérica.
 
 ## 🚀 Instrucciones de Ejecución (¡Importante!)
